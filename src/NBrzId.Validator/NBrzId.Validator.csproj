@@ -6,11 +6,12 @@
     <BaseOutputPath>bin\</BaseOutputPath>
     <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
     <PackageId>NBrzId.Validator</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Authors>Christian Martins</Authors>
     <Description>Defines and implements validation rules for common Brazilian identifiers (CNPJ, CPF etc.)</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/Preulo123/NBrzId.Validator</RepositoryUrl>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
 
   <PropertyGroup Label="FineCodeCoverage">
@@ -21,6 +22,10 @@
 
   <ItemGroup>
     <PackageReference Include="NBrzId.Common" Version="[0.1.0, 1.0.0)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="icon.png" Pack="true" PackagePath="/" />
   </ItemGroup>
 
 </Project>
