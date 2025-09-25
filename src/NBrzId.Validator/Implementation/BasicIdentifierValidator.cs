@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 
 using NBrzId.Common;
 
@@ -25,7 +25,7 @@ namespace NBrzId.Validator.Implementation
             if (removeFormatters)
             {
                 var formatterIndices = Identifier.Mask.Select((c, i) => {
-                    if (c == 'N')
+                    if (c == 'N' || c == 'X' || c == 'A')
                     {
                         return -1;
                     }
@@ -53,7 +53,7 @@ namespace NBrzId.Validator.Implementation
 
         protected virtual bool ApplyBasicValidations(string value)
         {
-            return !AllCharsAreEqual(value) && AllCharsAreDigits(value);
+            return !AllCharsAreEqual(value) && AllCharsAreValid(value);
         }
 
         protected static bool AllCharsAreEqual(string value)
@@ -61,12 +61,12 @@ namespace NBrzId.Validator.Implementation
             return value.Distinct().Count() == 1;
         }
 
-        protected static bool AllCharsAreDigits(string value)
+        protected virtual bool AllCharsAreValid(string value)
         {
             return value.All(c => char.IsDigit(c));
         }
 
-        protected static int ParseChar(char value)
+        protected virtual int ParseChar(char value)
         {
             return value - '0';
         }
