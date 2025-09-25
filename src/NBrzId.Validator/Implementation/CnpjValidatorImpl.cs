@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Linq;
 
 using NBrzId.Common;
 
@@ -31,7 +32,7 @@ namespace NBrzId.Validator.Implementation
 			return cnpj.Substring(8, 4) != InvalidBranchNumber;
 		}
 
-		private static bool ApplyMod11Validation(string cnpj)
+		private bool ApplyMod11Validation(string cnpj)
 		{
 			int sum;
 			int remainder;
@@ -77,5 +78,10 @@ namespace NBrzId.Validator.Implementation
 
 			return cnpj.EndsWith(digits);
 		}
+
+        protected override bool AllCharsAreValid(string value)
+        {
+            return value.All(c => char.IsDigit(c) || c > 64 && c < 91);
+        }
     }
 }

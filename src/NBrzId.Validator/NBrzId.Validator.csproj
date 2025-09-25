@@ -1,12 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <BaseOutputPath>bin\</BaseOutputPath>
     <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
     <PackageId>NBrzId.Validator</PackageId>
-    <Version>0.1.1</Version>
     <Authors>Christian Martins</Authors>
     <Description>Defines and implements validation rules for common Brazilian identifiers (CNPJ, CPF etc.)</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -21,7 +19,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NBrzId.Common" Version="[0.1.0, 1.0.0)" />
+    <PackageReference Include="NBrzId.Common" Version="[1.0.0, 2.0.0)" />
   </ItemGroup>
 
   <ItemGroup>

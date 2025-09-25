@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 using Xunit;
 
@@ -93,12 +93,12 @@ namespace NBrzId.Validator.Tests
         [InlineData("48628623060")]
         [InlineData("66881678673")]
         [InlineData("28072824589")]
-        [InlineData("01023106299")]
+        [InlineData("1023106299")]
         public void ShouldReturnTrueWhenMod11ValidationReturnsTrue(string cpfCandidate)
         {
             var target = new CpfValidatorImpl(BrzIdentifier.Cpf);
 
-            var actual = target.ApplyValidation(cpfCandidate);
+            var actual = target.ApplyValidation(cpfCandidate, pad: true);
 
             Assert.True(actual);
         }

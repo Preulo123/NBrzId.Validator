@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 using Xunit;
 
@@ -64,15 +64,15 @@ namespace NBrzId.Validator.Tests
         [Theory]
         [InlineData("00000000000000")]
         [InlineData("111111111111i1")]
-        [InlineData("22222222222Z22")]
+        [InlineData("22222222222z22")]
         [InlineData("3333333333e333")]
-        [InlineData("444444444A4444")]
+        [InlineData("444444444a4444")]
         [InlineData("55555555s55555")]
         [InlineData("6666666G666666")]
         [InlineData("777777t7777777")]
         [InlineData("88888%88888888")]
         [InlineData("n9999999999999")]
-        public void ShouldReturnFalseWhenAnyOfCharsAreNotDigits(string cnpjCandidate)
+        public void ShouldReturnFalseWhenAnyOfCharsAreNotValidDigits(string cnpjCandidate)
         {
             var target = new CnpjValidatorImpl(BrzIdentifier.Cnpj);
 
@@ -82,7 +82,7 @@ namespace NBrzId.Validator.Tests
         }
 
         [Theory]
-        [InlineData("08216422000020")]
+        [InlineData("8216422000020")]
         [InlineData("21132466000030")]
         [InlineData("46013442000092")]
         [InlineData("67666203000001")]
@@ -91,7 +91,7 @@ namespace NBrzId.Validator.Tests
         {
             var target = new CnpjValidatorImpl(BrzIdentifier.Cnpj);
 
-            var actual = target.ApplyValidation(cnpjCandidate);
+            var actual = target.ApplyValidation(cnpjCandidate, pad: true);
 
             Assert.False(actual);
         }
@@ -107,6 +107,7 @@ namespace NBrzId.Validator.Tests
         [InlineData("63167461000173")]
         [InlineData("52041587000180")]
         [InlineData("45232885000192")]
+        [InlineData("12ABC34501DE35")]
         public void ShouldReturnTrueWhenMod11ValidationReturnsTrue(string cnpjCandidate)
         {
             var target = new CnpjValidatorImpl(BrzIdentifier.Cnpj);
