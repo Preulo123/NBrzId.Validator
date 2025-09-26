@@ -26,7 +26,7 @@ This library provides a set of tools and interfaces for validating Brazilian ide
 To include this library in your .NET project, add it as a dependency via NuGet:
 
 ```sh
-dotnet add package NBrzId.Validator --version 1.0.0
+dotnet add package NBrzId.Validator --version 1.0.1
 ```
 
 ## Usage
@@ -127,4 +127,5 @@ Contributions are welcome! Please open an issue to report bugs or discuss improv
 ## License
 
 This project is licensed under the MIT License. See the LICENSE.md file for details.
+
 
