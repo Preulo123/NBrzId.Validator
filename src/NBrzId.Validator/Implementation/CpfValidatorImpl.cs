@@ -77,7 +77,7 @@ namespace NBrzId.Validator.Implementation
 			return _taxRegionsByDigit[cpf[8]].Contains(stateCode.ToUpper());
 		}
 
-        private static bool ApplyMod11Validation(string cpf)
+        private bool ApplyMod11Validation(string cpf)
 		{
 			string digits;
 			
@@ -120,3 +120,4 @@ namespace NBrzId.Validator.Implementation
 		}
     }
 }
+
