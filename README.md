@@ -26,7 +26,7 @@ This library provides a set of tools and interfaces for validating Brazilian ide
 To include this library in your .NET project, add it as a dependency via NuGet:
 
 ```sh
-dotnet add package NBrzId.Validator --version 0.1.0
+dotnet add package NBrzId.Validator --version 1.0.0
 ```
 
 ## Usage
@@ -118,9 +118,7 @@ This library targets .NET Standard 2.0, ensuring compatibility with .NET Core, .
 
 ## Roadmap
 
-This library is in active development. Planned features for future releases include:
-- Support for the new CNPJ format, which includes letters
-- Additional Brazilian identifiers validations as needed
+This library is in active development. Planned features for future releases include additional Brazilian identifiers validations as needed
 
 ## Contributing
 
@@ -129,3 +127,4 @@ Contributions are welcome! Please open an issue to report bugs or discuss improv
 ## License
 
 This project is licensed under the MIT License. See the LICENSE.md file for details.
+
