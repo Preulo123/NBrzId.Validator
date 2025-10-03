@@ -1,6 +1,6 @@
 # Brazilian Identifiers Validator Library
 
-This library provides validation methos for Brazilian identifiers in .NET applications.
+This library provides validation methods for Brazilian identifiers in .NET applications.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -26,7 +26,7 @@ This library provides a set of tools and interfaces for validating Brazilian ide
 To include this library in your .NET project, add it as a dependency via NuGet:
 
 ```sh
-dotnet add package NBrzId.Validator --version 1.0.1
+dotnet add package NBrzId.Validator --version 1.0.2
 ```
 
 ## Usage
