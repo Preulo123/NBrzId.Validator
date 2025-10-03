@@ -44,7 +44,7 @@ namespace NBrzId.Validator.Tests
         [InlineData("11328885496", null, true)]
         [InlineData("32728128731", "",   true)]
         [InlineData("40466131224", "RR", true)]
-        public void ShouldValidateCpfWithStateCode(string cpfCandidate, string stateCode, bool expected)
+        public void ShouldValidateCpfWithStateCode(string cpfCandidate, string? stateCode, bool expected)
         {
             var actual = BrzValidations.CheckCpf(cpfCandidate, stateCode);
 
